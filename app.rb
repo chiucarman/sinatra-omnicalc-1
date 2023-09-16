@@ -10,5 +10,5 @@ get("/square/new") do
 end
 
 get("/square/results") do
-
+ erb(:square_results)
 end
