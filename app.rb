@@ -8,3 +8,7 @@ end
 get("/square/new") do
   erb(:new_square_calc)
 end
+
+get("/square/results") do
+
+end
