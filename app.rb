@@ -34,5 +34,9 @@ get("/payment/new") do
 end
 
 get("/payment/results") do
+  apr = params.fetch("user_apr").to_f
+
+  @apr_percentage = apr.to_fs(:percentage, { :precision => 4})
+  
   erb(:payment_results)
 end
