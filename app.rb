@@ -42,10 +42,10 @@ get("/payment/results") do
   principal = params.fetch("user_principal").to_f
   @principal_dollar = principal.to_fs(:currency)
 
-  r = apr / 100 /12
-  PV = principal
-  n = years * 12
-  
+  @r = apr / 100 /12
+  @PV = principal
+  @n = years * 12
+
   @numerator
   @denominator
   
