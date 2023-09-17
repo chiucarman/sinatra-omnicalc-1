@@ -35,8 +35,14 @@ end
 
 get("/payment/results") do
   apr = params.fetch("user_apr").to_f
-
   @apr_percentage = apr.to_fs(:percentage, { :precision => 4})
+
+  @years = params.fetch("user_years").to_i
+
+  principal = params.fetch("user_principal").to_f
+  @principal_dollar = principal.to_fs(:currency)
+
+  
   
   erb(:payment_results)
 end
