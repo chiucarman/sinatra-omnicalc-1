@@ -48,6 +48,8 @@ get("/payment/results") do
 
   @numerator = @r * @PV
   @denominator = 1 - ((1 + @r) ** -@n)
+
+  @payment = (@numerator / @denominator).to_fs(:currency)
   
   erb(:payment_results)
 end
