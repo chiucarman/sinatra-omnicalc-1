@@ -13,6 +13,10 @@ get("/square/results") do
   @the_num = params.fetch("user_num")
 
   @the_result = @the_num.to_f ** 2
-
+ 
  erb(:square_results)
+end
+
+get("/square_root/new") do
+  erb:(square_root_calc)
 end
