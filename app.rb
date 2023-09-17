@@ -20,3 +20,7 @@ end
 get("/square_root/new") do
   erb(:square_root_calc)
 end
+
+get("/square_root/results") do
+  erb(:square_root_results)
+end
