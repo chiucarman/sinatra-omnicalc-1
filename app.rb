@@ -46,8 +46,8 @@ get("/payment/results") do
   @PV = principal
   @n = @years * 12
 
-  @numerator
-  @denominator
+  @numerator = @r * @PV
+  @denominator = 1 - ((1 + @r) ** -@n)
   
   erb(:payment_results)
 end
